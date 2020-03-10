@@ -11,6 +11,8 @@ import ProtectedRoute from "./protectedRoute";
 import "./App.css";
 import { auth } from "./components/Form";
 import Signin from "./routes/Signin";
+import Cars from "./routes/Cars";
+import Car from "./routes/Car";
 
 function App() {
   return (
@@ -23,9 +25,10 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/login" component={LandingPage} />
           <Route path="/signin" component={Signin} />
-          <ProtectedRoute path="/users/:id" component={Item} />
           <Route path="/users" exact component={Users} />
-          <Route path="/users/:id" component={Item} />
+          <ProtectedRoute path="/users/:id" exact component={Item} />
+          <ProtectedRoute path="/users/:id/cars" exact component={Cars} />
+          <ProtectedRoute path="/users/:id/cars/:car_id" component={Car} />
         </Switch>
       </div>
     </Router>

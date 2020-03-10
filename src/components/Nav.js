@@ -25,9 +25,14 @@ function Nav(props) {
             <li className="nav-item nav-link">Home</li>
           </Link>
           {props.auth.isAuthenticated() ? (
-            <Link to={`/users/${props.auth.getId()}`}>
-              <li className="nav-item nav-link">Account</li>
-            </Link>
+            <React.Fragment>
+              <Link to={`/users/${props.auth.getId()}`}>
+                <li className="nav-item nav-link">Account</li>
+              </Link>
+              <Link to={`/users/${props.auth.getId()}/cars`}>
+                <li className="nav-item nav-link">Cars</li>
+              </Link>
+            </React.Fragment>
           ) : (
             <React.Fragment>
               <Link to="/login">
