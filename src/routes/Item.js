@@ -13,7 +13,7 @@ function Item({ match }) {
     while (true) {
       setLoading(true);
       data = await fetch(
-        `https://save-your-car-api.herokuapp.com/api/v1.0/users/${match.params.id}`
+        `https://saveyourcar-api.herokuapp.com/api/v1.0/users/${match.params.id}`
       );
       const item = await data.json();
       console.log(item);

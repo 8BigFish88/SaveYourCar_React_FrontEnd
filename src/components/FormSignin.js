@@ -43,7 +43,7 @@ const FormSignin = props => {
       let response;
       while (true) {
         response = await fetch(
-          `https://save-your-car-api.herokuapp.com/api/v1.0/users`,
+          `https://saveyourcar-api.herokuapp.com/api/v1.0/users`,
           {
             method: "POST",
             headers: {

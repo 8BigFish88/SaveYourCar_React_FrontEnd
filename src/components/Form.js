@@ -22,7 +22,7 @@ const Form = props => {
     let response;
     while (true) {
       response = await fetch(
-        `https://save-your-car-api.herokuapp.com/api/v1.0/users/${email}/${password}`
+        `https://saveyourcar-api.herokuapp.com/api/v1.0/users/${email}/${password}`
       );
       const data = await response.json();
       if (response.status === 200) {

@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Form } from "react-advanced-form";
-import { Input } from "react-advanced-form-addons";
+//import { Form } from "react-advanced-form";
+//import { Input } from "react-advanced-form-addons";
 
-const CarForm = () => {
+const CarForm = ({ car }) => {
   const [form, setForm] = useState({
     name: "string",
     fuel: "string",
@@ -15,6 +15,8 @@ const CarForm = () => {
     tax_date: "2020-03-11T10:14:41.534Z",
     avarage_km: 0
   });
+  const [loading, setLoading] = useState(false);
+  const [item, setItem] = useState(car);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -31,6 +33,12 @@ const CarForm = () => {
     console.log(prevForm);
     prevForm[[name]] = value;
     setForm(prevForm);
+  };
+
+  const cutDate = str => {
+    let date = str;
+    typeof str === "string" && (date = date.slice(0, 10));
+    return date;
   };
 
   return (
@@ -70,7 +78,7 @@ const CarForm = () => {
         className="form-control"
         onChange={handleChange}
         name="matriculation"
-        value={form.matriculation}
+        value={cutDate(form.matriculation)}
         placeholder="matriculation"
         type="date"
       />

@@ -14,7 +14,7 @@ function Car({ match }) {
     while (true) {
       setLoading(true);
       data = await fetch(
-        `https://save-your-car-api.herokuapp.com/api/v1.0/cars/${match.params.car_id}`
+        `https://saveyourcar-api.herokuapp.com/api/v1.0/cars/${match.params.car_id}`
       );
       const car_data = await data.json();
       if (data.status == 200) {
@@ -26,6 +26,12 @@ function Car({ match }) {
     }
   };
 
+  const cutDate = str => {
+    let date = str;
+    typeof str === "string" && (date = date.slice(0, 10));
+    return date;
+  };
+
   return (
     <div className="jumbotron mt-5">
       {loading ? (
@@ -34,8 +40,8 @@ function Car({ match }) {
         <div>
           <h1>{car.name}</h1>
           <h1>{car.fuel}</h1>
-          <h1>{car.matriculation}</h1>
-          <CarForm/>
+          <h1>{cutDate(car.matriculation)}</h1>
+          <CarForm car={car} />
         </div>
       )}
     </div>

@@ -14,7 +14,7 @@ function Users() {
     setLoading(true);
     while (true) {
       data = await fetch(
-        "https://save-your-car-api.herokuapp.com/api/v1.0/users"
+        "https://saveyourcar-api.herokuapp.com/api/v1.0/users"
       );
       const items = await data.json();
       console.log(items.data);

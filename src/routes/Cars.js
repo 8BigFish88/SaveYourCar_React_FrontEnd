@@ -14,7 +14,7 @@ function Cars({ match }) {
     setLoading(true);
     while (true) {
       data = await fetch(
-        `https://save-your-car-api.herokuapp.com/api/v1.0/cars?id_user=${match.params.id}`
+        `https://saveyourcar-api.herokuapp.com/api/v1.0/cars?id_user=${match.params.id}`
       );
       const items = await data.json();
       console.log(items.data);
