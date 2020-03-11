@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CarForm from "../components/CarForm";
 
 function Car({ match }) {
   useEffect(() => {
@@ -34,6 +35,7 @@ function Car({ match }) {
           <h1>{car.name}</h1>
           <h1>{car.fuel}</h1>
           <h1>{car.matriculation}</h1>
+          <CarForm/>
         </div>
       )}
     </div>
