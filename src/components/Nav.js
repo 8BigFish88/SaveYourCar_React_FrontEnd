@@ -32,6 +32,9 @@ function Nav(props) {
               <Link to={`/users/${props.auth.getId()}/cars`}>
                 <li className="nav-item nav-link">Cars</li>
               </Link>
+              <Link to={`/users/${props.auth.getId()}/cars/new_car`}>
+                <li className="nav-item nav-link">New Car</li>
+              </Link>
             </React.Fragment>
           ) : (
             <React.Fragment>
