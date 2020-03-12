@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const NewCarForm = ({ cutDate, handleInt, user_id }) => {
+const NewCarForm = ({ cutDate, handleInt, user_id, history }) => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -46,7 +46,8 @@ const NewCarForm = ({ cutDate, handleInt, user_id }) => {
       const data = await response.json();
       if (response.status !== 500) {
         setLoading(false);
-        alert("Your car has been saved");
+        history.push(`/users/${user_id}/cars`);
+        //alert("Your car has been saved");
         console.log(data);
         break;
       }

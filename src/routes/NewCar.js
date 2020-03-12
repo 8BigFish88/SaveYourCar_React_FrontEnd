@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NewCarForm from "../components/NewCarForm";
 
-function NewCar({ match }) {
+function NewCar({ match, history }) {
   //function that trasforms the sql date tape in a js understandable date
   const cutDate = str => {
     let date = str;
@@ -25,6 +25,7 @@ function NewCar({ match }) {
       <div>
         <h1>Inserisci Nuova Auto:</h1>
         <NewCarForm
+          history={history}
           user_id={match.params.id}
           cutDate={cutDate}
           handleInt={handleInt}
