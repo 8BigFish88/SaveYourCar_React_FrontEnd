@@ -18,7 +18,7 @@ function Car({ match }) {
       );
       const car_data = await data.json();
       if (data.status == 200) {
-        setCar(car_data.car);
+        setCar(car_data);
         setLoading(false);
         console.log(car_data);
         break;
@@ -26,10 +26,22 @@ function Car({ match }) {
     }
   };
 
+  //function that trasforms the sql date tape in a js understandable date
   const cutDate = str => {
     let date = str;
     typeof str === "string" && (date = date.slice(0, 10));
     return date;
+  };
+
+  // function for chacking the existence of the objects inside car_data.
+  //Return and int if the car data type is int and a date if its date
+  const handleInt = (obj, n) => {
+    let value = obj;
+    typeof obj === "object" &&
+      (n === 1 || n === 3 || n === 6
+        ? (value = obj.dataInt)
+        : (value = obj.dataDate));
+    return value;
   };
 
   return (
@@ -41,7 +53,13 @@ function Car({ match }) {
           <h1>{car.name}</h1>
           <h1>{car.fuel}</h1>
           <h1>{cutDate(car.matriculation)}</h1>
-          <CarForm car={car} />
+          <CarForm
+            user_id={match.params.id}
+            id={match.params.car_id}
+            car={car}
+            cutDate={cutDate}
+            handleInt={handleInt}
+          />
         </div>
       )}
     </div>
