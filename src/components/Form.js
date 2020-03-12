@@ -30,6 +30,9 @@ const Form = props => {
         auth.login(data.id, () => props.props_parent.history.push("/"));
         console.log(data);
         break;
+      } else if (response.status === 400 || response.status === 404) {
+        alert(data);
+        break;
       }
     }
   };
