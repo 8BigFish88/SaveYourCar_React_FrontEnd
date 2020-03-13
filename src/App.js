@@ -14,6 +14,7 @@ import Signin from "./routes/Signin";
 import Cars from "./routes/Cars";
 import Car from "./routes/Car";
 import NewCar from "./routes/NewCar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <ProtectedRoute path="/users/:id/cars/:car_id" component={Car} />
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }
