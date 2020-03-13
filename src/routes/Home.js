@@ -5,10 +5,10 @@ import HomeComponent from "../components/HomeComponent";
 
 const Home = props => {
   return (
-    <div className="jumbotron">
-      <h1>Home Page</h1>
+    <React.Fragment>
       {auth.isAuthenticated() ? (
-        <React.Fragment>
+        <div>
+          <HomeComponent id={auth.getId()} />
           <button
             className="btn btn-secondary m-2"
             onClick={() => {
@@ -17,14 +17,16 @@ const Home = props => {
           >
             LogOut
           </button>
-          <HomeComponent id={auth.getId()} />
-        </React.Fragment>
+        </div>
       ) : (
-        <Link to="/login">
-          <button className="btn btn-secondary m-2">LogIn</button>
-        </Link>
+        <div className="jumbotron mt-5">
+          <h1>Home Page</h1>
+          <Link to="/login">
+            <button className="btn btn-secondary m-2">LogIn</button>
+          </Link>
+        </div>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav(props) {
   console.log(props.auth);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
         SaveYourCar
       </Link>
@@ -46,10 +46,6 @@ function Nav(props) {
               </Link>
             </React.Fragment>
           )}
-
-          <Link to="/users">
-            <li className="nav-item nav-link">Users</li>
-          </Link>
         </ul>
       </div>
     </nav>

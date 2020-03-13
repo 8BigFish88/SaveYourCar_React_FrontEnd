@@ -1,3 +1,7 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1503703294279-c83bdf7b4bf4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80");
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -32,7 +36,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: #fcfcf5 !important;
 }
 @media (min-width: 768px) {
   .jumbotron {
@@ -62,6 +66,14 @@ footer p {
   margin-bottom: 0.25rem;
 }
 
+a {
+  color: #fcfcf5 !important;
+}
+
 a:hover {
   text-decoration: none !important;
+}
+
+button {
+  background-color: #29363a !important;
 }

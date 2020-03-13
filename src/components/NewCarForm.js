@@ -79,7 +79,7 @@ const NewCarForm = ({ cutDate, handleInt, user_id, history }) => {
       />
       <br />
       <br />
-      <div className="form-inline form-check">
+      <div className="form-check form-check-inline ">
         <input
           className="form-check-input"
           type="radio"
@@ -89,9 +89,9 @@ const NewCarForm = ({ cutDate, handleInt, user_id, history }) => {
           onChange={handleChange}
         />
         <label className="form-check-label m-2">Benzina</label>
-
+      </div>
+      <div className="form-check form-check-inline ">
         <input
-          className="form-check-input"
           type="radio"
           name="fuel"
           value="diesel"

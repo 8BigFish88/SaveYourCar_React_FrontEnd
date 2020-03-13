@@ -104,7 +104,7 @@ const FormSignin = props => {
         type="password"
       />
       <button className="btn btn-secondary m-2" type="submit">
-        Log In
+        sign In
       </button>
     </form>
   );

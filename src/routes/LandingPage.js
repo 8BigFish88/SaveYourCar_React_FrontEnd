@@ -3,7 +3,7 @@ import Form from "../components/Form";
 
 const LandingPage = props => {
   return (
-    <div className="jumbotron">
+    <div className="jumbotron mt-5">
       <h1>Log in</h1>
       <Form props_parent={props} />
     </div>

@@ -26,7 +26,6 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/login" component={LandingPage} />
           <Route path="/signin" component={Signin} />
-          <Route path="/users" exact component={Users} />
           <ProtectedRoute path="/users/:id" exact component={Item} />
           <ProtectedRoute path="/users/:id/cars" exact component={Cars} />
           <ProtectedRoute path="/users/:id/cars/new_car" component={NewCar} />
