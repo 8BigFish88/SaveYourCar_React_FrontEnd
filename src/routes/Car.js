@@ -51,8 +51,6 @@ function Car({ match }) {
       ) : (
         <div>
           <h1>{car.name}</h1>
-          <h1>{car.fuel}</h1>
-          <h1>{cutDate(car.matriculation)}</h1>
           <CarForm
             user_id={match.params.id}
             id={match.params.car_id}
