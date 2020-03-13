@@ -41,7 +41,7 @@ function Cars({ id }) {
           ) : (
             items.cars.map(item => {
               return (
-                <div className="mb-4 col-lg-3" key={item.id}>
+                <div className="mb-4 col-lg-4 col-sm-12 " key={item.id}>
                   <Link to={`/users/${id}/cars/${item.id}`}>
                     <button
                       onClick={() => {

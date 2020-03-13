@@ -36,7 +36,7 @@ function Cars({ match }) {
           ) : (
             items.map(item => {
               return (
-                <div className="mb-4 col-lg-3" key={item.id}>
+                <div className="mb-4 col-lg-4 col-sm-12" key={item.id}>
                   <Link to={`/users/${match.params.id}/cars/${item.id}`}>
                     <button className="btn btn-block btn-secondary m-2 ">
                       {item.name}

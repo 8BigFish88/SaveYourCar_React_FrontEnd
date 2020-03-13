@@ -20,10 +20,7 @@ const Home = props => {
         </div>
       ) : (
         <div className="jumbotron mt-5">
-          <h1>Home Page</h1>
-          <Link to="/login">
-            <button className="btn btn-secondary m-2">LogIn</button>
-          </Link>
+          <h1 className="elegantshadow">SaveYourCar</h1>
         </div>
       )}
     </React.Fragment>

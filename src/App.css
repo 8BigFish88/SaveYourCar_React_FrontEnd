@@ -1,7 +1,17 @@
-body {
-  background-image: url("./background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+@media (min-width: 800px) {
+  body {
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    background-image: url("./background_mobile.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
 }
 
 .form-signin {
@@ -38,7 +48,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
-  background-color: #fcfcf5 !important;
+  background: rgba(43, 59, 62, 0.4) !important;
 }
 @media (min-width: 768px) {
   .jumbotron {
@@ -53,6 +63,7 @@ body {
 
 .jumbotron h1 {
   font-weight: 300;
+  color: whitesmoke;
 }
 
 .jumbotron .container {
@@ -61,7 +72,10 @@ body {
 
 footer {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
+  position: relative;
+  align-content: initial;
+  color: #7e7e7b;
 }
 
 footer p {
@@ -78,9 +92,4 @@ a:hover {
 
 button {
   background-color: #29363a !important;
-}
-
-footer {
-  position: relative;
-  align-content: initial;
 }
