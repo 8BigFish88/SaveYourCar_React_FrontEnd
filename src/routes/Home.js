@@ -1,6 +1,6 @@
 import React from "react";
 import auth from "../auth";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import HomeComponent from "../components/HomeComponent";
 
 const Home = props => {
@@ -8,6 +8,13 @@ const Home = props => {
     <React.Fragment>
       {auth.isAuthenticated() ? (
         <div>
+          <div className="jumbotron mt-5">
+            <svg viewBox="400 -20 1000 300">
+              <text className="elegantshadow" x="50%" y="50%">
+                SaveYourCar
+              </text>
+            </svg>
+          </div>
           <HomeComponent id={auth.getId()} />
           <button
             className="btn btn-secondary m-2"
@@ -21,9 +28,11 @@ const Home = props => {
       ) : (
         <div className="jumbotron mt-5">
           <svg viewBox="400 -20 1000 300">
-            <text className="elegantshadow" x="50%" y="50%">
-              SaveYourCar
-            </text>
+            <Link to="/login">
+              <text className="elegantshadow" x="50%" y="50%">
+                SaveYourCar
+              </text>
+            </Link>
           </svg>
         </div>
       )}

@@ -16,7 +16,7 @@ import Car from "./routes/Car";
 import NewCar from "./routes/NewCar";
 import Footer from "./components/Footer";
 
-function App() {
+function App(props) {
   return (
     <Router>
       <Switch>

@@ -32,7 +32,7 @@ function Cars({ id }) {
   };
 
   return (
-    <div className="jumbotron mt-5 ">
+    <div className="jumbotron container mt-5">
       <h1>Le tue Auto:</h1>
       <div className="album py-5">
         <div className="row">

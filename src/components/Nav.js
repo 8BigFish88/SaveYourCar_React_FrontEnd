@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 function Nav(props) {
   console.log(props.auth);
@@ -34,6 +34,13 @@ function Nav(props) {
               </Link>
               <Link to={`/users/${props.auth.getId()}/cars/new_car`}>
                 <li className="nav-item nav-link">New Car</li>
+              </Link>
+              <Link
+                onClick={() => {
+                  props.auth.logout(() => <Redirect to="/" />);
+                }}
+              >
+                <li className="nav-item nav-link">Log Out</li>
               </Link>
             </React.Fragment>
           ) : (

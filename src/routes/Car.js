@@ -45,7 +45,7 @@ function Car({ match }) {
   };
 
   return (
-    <div className="jumbotron mt-5">
+    <div className="jumbotron container mt-5 ">
       {loading ? (
         <h1>...loading content</h1>
       ) : (

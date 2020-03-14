@@ -89,6 +89,7 @@ h1 {
 
 .jumbotron .container {
   max-width: 40rem;
+  background: rgba(255, 255, 255, 0.4) !important;
 }
 
 footer {

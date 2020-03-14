@@ -21,7 +21,7 @@ function NewCar({ match, history }) {
   };
 
   return (
-    <div className="jumbotron mt-5">
+    <div className="jumbotron mt-5 container">
       <div>
         <h1>Inserisci Nuova Auto:</h1>
         <NewCarForm
