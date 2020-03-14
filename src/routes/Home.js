@@ -20,7 +20,11 @@ const Home = props => {
         </div>
       ) : (
         <div className="jumbotron mt-5">
-          <h1 className="retroshadow">SaveYourCar</h1>
+          <svg viewBox="400 -20 1000 300">
+            <text className="elegantshadow" x="50%" y="50%">
+              SaveYourCar
+            </text>
+          </svg>
         </div>
       )}
     </React.Fragment>
