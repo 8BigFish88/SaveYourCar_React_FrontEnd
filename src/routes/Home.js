@@ -20,7 +20,7 @@ const Home = props => {
         </div>
       ) : (
         <div className="jumbotron mt-5">
-          <h1 className="elegantshadow">SaveYourCar</h1>
+          <h1 className="retroshadow">SaveYourCar</h1>
         </div>
       )}
     </React.Fragment>

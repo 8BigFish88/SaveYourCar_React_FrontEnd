@@ -8,9 +8,11 @@
 
 @media (max-width: 800px) {
   body {
-    background-image: url("./background_mobile.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
+    background: url("./background_mobile.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -62,8 +64,14 @@
 }
 
 .jumbotron h1 {
-  font-weight: 300;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  font-size: 1.5rem;
   color: whitesmoke;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
 }
 
 .jumbotron .container {
@@ -92,4 +100,11 @@ a:hover {
 
 button {
   background-color: #29363a !important;
+}
+
+h1.retroshadow {
+  color: #2c2c2c;
+  background-color: #d5d5d5;
+  letter-spacing: 0.01em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
