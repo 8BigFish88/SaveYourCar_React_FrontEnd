@@ -30,9 +30,9 @@ function Item({ match }) {
       {loading ? (
         <h1>...loading content</h1>
       ) : (
-        <div>
+        <div className="container text-center">
           <h1>{item.username}</h1>
-          <h1>{item.email}</h1>
+          <div className="container">{item.email}</div>
         </div>
       )}
     </div>
