@@ -2,6 +2,7 @@ import React from "react";
 import auth from "../auth";
 import { Link, Redirect } from "react-router-dom";
 import HomeComponent from "../components/HomeComponent";
+import { useAlert } from "react-alert";
 
 const Home = props => {
   return (

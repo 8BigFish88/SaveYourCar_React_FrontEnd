@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 function Cars({ id }) {
   const [items, setItems] = useState({ reminders_count: 0, cars: [] });
   const [loading, setLoading] = useState(false);
+  const alert = useAlert();
 
   useEffect(() => {
     fetchItems();
@@ -23,7 +25,7 @@ function Cars({ id }) {
         setLoading(false);
         console.log(items.count);
         items.reminders_count > 0 &&
-          alert(
+          alert.show(
             `Hai ${items.reminders_count} reminders in sospeso! Controlla le tue auto!`
           );
         break;
@@ -47,7 +49,7 @@ function Cars({ id }) {
                       onClick={() => {
                         item.reminders &&
                           Object.values(item.reminders_text).map(text => {
-                            alert(text);
+                            alert.show(text);
                           });
                       }}
                       className="btn btn-block btn-secondary m-2 "
@@ -58,7 +60,7 @@ function Cars({ id }) {
                       onClick={() => {
                         item.reminders &&
                           Object.values(item.reminders_text).map(text => {
-                            alert(text);
+                            alert.show(text);
                           });
                       }}
                       className="badge badge-secondary"
