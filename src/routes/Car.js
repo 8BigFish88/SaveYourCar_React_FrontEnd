@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import CarForm from "../components/CarForm";
 
-function Car({ match }) {
+function Car({ match, history }) {
   useEffect(() => {
     fetchCar();
+    console.log(match);
   }, []);
 
   const [car, setCar] = useState({});
@@ -57,6 +58,7 @@ function Car({ match }) {
             car={car}
             cutDate={cutDate}
             handleInt={handleInt}
+            history={history}
           />
         </div>
       )}

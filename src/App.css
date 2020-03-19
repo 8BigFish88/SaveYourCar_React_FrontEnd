@@ -66,6 +66,7 @@ h1 {
   padding-bottom: 3rem;
   margin-bottom: 0;
   background: rgba(43, 59, 62, 0.4) !important;
+  color: antiquewhite;
 }
 @media (min-width: 768px) {
   .jumbotron {

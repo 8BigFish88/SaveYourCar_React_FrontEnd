@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 //import { Form } from "react-advanced-form";
 //import { Input } from "react-advanced-form-addons";
 
-const CarForm = ({ id, car, cutDate, handleInt, user_id }) => {
+const CarForm = ({ id, car, cutDate, handleInt, user_id, history }) => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: car.name,
@@ -49,6 +49,7 @@ const CarForm = ({ id, car, cutDate, handleInt, user_id }) => {
       const data = await response.json();
       if (response.status !== 500) {
         setLoading(false);
+        history.push(`/users/${user_id}/cars`);
         alert("Your car has been updated");
         console.log(data);
         break;
